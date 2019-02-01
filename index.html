@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="stylesheet" href="assets/styles/reset.css">
-        <!-- <link rel="stylesheet" href="assets/styles/debug.css"> -->
-        <style>
-            selector { property: value; }
-        </style>
-    </head>
-    <body>
-        <article>
-            <p class="debug-center">ARTICLE 1</p>
-        </article>
 
-        <article>
-            <p>ARTICLE 2</p>
-        </article>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>My Webpage</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Raleway" rel="stylesheet">
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="page__wrapper">
+        <div class="grid">
+            <img class="grid__header" src="assets/img/pikapost.png">
+            <nav class="grid__nav">
+                <button class="grid__nav__btn"><a href="pikapost.net">HOME</a></button>
+                <div class="grid__nav__dropdown">
+                    <button class="grid__nav__dropdown__btn">Related Sites</button>
+                    <div class="grid__nav__dropdown__content">
+                        <a href="#">PikaPost.net</a>
+                        <a href="#">PikaDeck</a>
+                        <a href="#">PokéBeach</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="grid__space1"></div>
+            <main class="grid__main">
+                <h3 class="grid__main__header1">Top 10 Cards From Lost Thunder</h3>
+                <p class="grid__main__body">Hello everybody, and welcome to my first post for quite a while. Today we
+                    will be reviewing the Lost Thunder expansion and I will pick out what I think are the ten best
+                    cards from the set.<span id="dots"> . .</span><span id="more" class="grid__main__body__more">
+                        <h2 class="grid__main__header2">Hounourable Mentions</h2>
+                        <p class="grid__main__body">Today I will have just one honourable mention. I don’t want to go
+                            into a bunch of nearly equal Pokémon that I somehow have to fit in, so this will be a
+                            single card spot. I couldn’t quite fit Mimikyu-GX into the top ten, so it will sit here.
+                            Mimikyu has a very powerful attack that pairs extremely well with cards like Decidueye and
+                            Giratina.</p>
+                        <h2 class="grid__main__header2">10. Meganium</h2>
+                        <p class="grid__main__body">This card has possibly my favourite ability in the game. Some
+                            people might deny this card being very good, but I like my Stage 2 Pokémon, and this is one
+                            of the greatest support cards for Stage 2 Pokémon there is. A simple 1-1 line of this in
+                            any Stage 2 deck that runs Rare Candy will improve it tenfold.</p>
+                    </span></p>
+                <button onclick="myFunction()" id="readMore">Read More</button>
+            </main>
+            <div class="grid__space2"></div>
+            <footer class="grid__footer">FOOTER</footer>
+        </div>
+    </div>
+</body>
+
 </html>

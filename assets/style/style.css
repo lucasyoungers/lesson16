@@ -1,9 +1,163 @@
-article {
-    padding: 0.5in 0;
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 8.5in) 1fr;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-article * {
-    grid-column: 2 / 3;
+.page__wrapper {
+    background-color: rgb(216, 187, 40);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: min-content 50px auto 70px;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "space1 main space2"
+        "footer footer footer";
+    /* grid-gap: .75em; */
+    height: 100vh;
+}
+
+/* @media(max-width: 768px) {
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "footer footer footer";
+}
+
+@media(max-width: 480px) {
+    display: block;
+} */
+
+.grid__header {
+    grid-area: header;
+    width: 100vw;
+}
+
+.grid__nav {
+    grid-area: nav;
+    background-color: darkslategrey;
+}
+
+.grid__nav__btn {
+    background-color: darkslategrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    height: 50px;
+}
+
+.grid__nav__btn:hover {
+    background-color: rgb(56, 90, 90);
+}
+
+.grid__nav__btn a:link {
+    color: white;
+}
+
+.grid__nav__btn a:visited {
+    color: white;
+}
+
+/* Start of Dropdown Menu */
+.grid__nav__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.grid__nav__dropdown__btn {
+    background-color: darkslategrey;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    height: 50px;
+}
+
+.grid__nav__dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.grid__nav__dropdown__content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.grid__nav__dropdown__content a:hover {
+    background-color: #ddd;
+}
+
+.grid__nav__dropdown:hover .grid__nav__dropdown__btn {
+    background-color: rgb(56, 90, 90);
+}
+
+.grid__nav__dropdown:hover .grid__nav__dropdown__content {
+    display: block;
+}
+/* End of Dropdown Menu */
+
+.grid__space1 {
+    grid-area: space1;
+    background-color: rgb(216, 187, 40);
+}
+
+.grid__main {
+    grid-area: main;
+    background-color: rgb(220, 220, 220);
+    padding: 1rem;
+}
+
+.grid__main__header1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+.grid__main__header2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+}
+
+.grid__main__body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.grid__main__body__more {
+    display: none;
+}
+
+#readMore {
+    background-color: darkslategrey;
+    color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+    border: none;
+    height: 30px;
+}
+
+.grid__space2 {
+    grid-area: space2;
+    background-color: rgb(216, 187, 40);
+}
+
+.grid__footer {
+    grid-area: footer;
+    background-color: lightgreen;
 }
